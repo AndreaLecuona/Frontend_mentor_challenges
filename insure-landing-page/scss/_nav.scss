@@ -1,0 +1,23 @@
+nav{
+    .wrapper{
+        min-height: 5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .toggle-button{
+            display: none;
+        }
+        .navbar-links{
+            ul{
+                display: flex;
+                a{
+                    @include list($neutral-dark-grayish-violet);
+                    margin-left: 1.8rem;
+                }
+                .btn-navbar{
+                    @include buttonDark;
+                }
+            }
+        }    
+    }
+}

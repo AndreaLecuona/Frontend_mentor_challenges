@@ -1,0 +1,35 @@
+.features{
+    margin-top: 19rem;
+    .wrapper{
+        padding-top: 4.6rem;
+        position: relative;
+        &::before{
+            content: '';
+            display: block;
+            width: 9.3rem;
+            height: 1px;
+            background-color: $neutral-dark-grayish-violet;
+            border-radius: 1px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        h2{
+            @include headings($neutral-very-dark-violet, 4.5rem);
+        }
+        .grid-features{
+            margin-top: 6.2rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 3.3rem;
+        }
+        h4{
+            @include headings($neutral-very-dark-violet, 1.5rem);
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        p{
+            @include text ($neutral-dark-grayish-violet);
+        }
+    }
+}

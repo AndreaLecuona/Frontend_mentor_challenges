@@ -1,0 +1,163 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: rgb(34, 34, 34);
+    padding-bottom: 2rem;
+}
+.wrapper{
+    width: 90%;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+.img-container img{
+    width: 100%;
+    background-size: cover;
+    border-radius: 5px;
+    opacity: 70%;
+    transition: all 0.5s ease;
+}
+.img-container img:hover{
+    opacity: 100%;
+    cursor: pointer;
+}
+
+h1{
+    margin: 3rem auto 1rem;
+    font-family: 'Comfortaa', cursive;
+    font-size: 500;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+hr {
+    border: 5px dotted #88D;
+    border-bottom: none;
+    height: 0px;
+    width: 20px;
+    margin: 1.5rem auto;
+}
+
+.grid-projects{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 3.3rem;
+}
+
+.img-container{
+    width: 100%;
+    overflow: hidden;
+}
+.card-style{
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+.card-style .project-name,
+.card-style .project-name:visited{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    padding: 0.5rem 0;
+    color: rgb(34, 34, 34);
+}
+.card-style p{
+    font-size: 0.8rem;
+    padding-right: 0.8rem;
+}
+.card-style .bold{
+    font-weight: bolder;
+}
+
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color:#88D;
+    padding: 0.8rem;
+}
+footer p{
+    font-family: 'Comfortaa', cursive;
+    font-size: 0.9rem;
+    text-align: center;
+    color: whitesmoke;
+}
+footer a{
+    margin-left: 0.5rem;
+}
+footer i{
+    font-size: 1rem;
+    color: whitesmoke;
+}
+footer i:hover{
+    color: rgb(34, 34, 34);
+}
+
+@media only screen and (max-width: 768px){
+    .wrapper{
+        width: 80%;
+        max-width: 70rem;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    .grid-projects{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .card-style .project-name{
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+    .card-style p{
+        font-size: 0.6rem;
+        line-height: 0.9rem;
+    }
+    footer p{
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    body{
+        padding-bottom: 3rem;
+    }
+    .wrapper{
+        width: 70%;
+        max-width: 70rem;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    .grid-projects{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .card-style .project-name{
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+    .card-style p{
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+    footer p{
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+        padding: 0 0.9rem;
+    }
+}

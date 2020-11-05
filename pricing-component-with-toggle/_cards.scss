@@ -1,0 +1,106 @@
+.grid{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    .card{
+        border-radius: 10px;
+        margin: 0 auto;
+        padding: 30px;
+        width: 90%;
+        &.basic{
+            margin-left: 4.5rem;
+            margin-top: 1rem;
+            background-color: white;
+            color: $dark-grayish-blue;
+            a{
+                border: 1px solid white;
+                background: linear-gradient(to right, $gradient1 , $gradient2);
+                color: white;
+                &:hover{
+                    background: none;
+                    color: $gradient2;
+                    box-sizing: border-box;
+                    border: 1px solid $grayish-blue;
+                }
+            }
+        }
+        &.master{
+            margin-left: -2rem;
+            margin-top: 1rem;
+            background-color: white;
+            color: $dark-grayish-blue;
+            a{
+                border: 1px solid white;
+                background: linear-gradient(to right, $gradient1 , $gradient2);
+                color: white;
+                &:hover{
+                    background: none;
+                    color: $gradient2;
+                    box-sizing: border-box;
+                    border: 1px solid $grayish-blue;
+                }
+            }
+        }
+        &.professional{
+            padding-top: 45px;
+            height: 105%;
+            color: $very-light-grayish-blue;
+            background: linear-gradient(to bottom, $gradient1 , $gradient2);
+            z-index: 1;
+            h2, li{
+                color: $very-light-grayish-blue;
+            }
+            a{
+                border: 1px solid white;
+                background-color: white;
+                color: $gradient2;
+                &:hover{
+                    background: none;
+                    color: white;
+                    box-sizing: border-box;
+                    border: 1px solid white;
+                }
+            }
+        }
+        h2{
+            color: $grayish-blue;
+            padding-bottom: 30px;
+        }
+        span{
+            font-size: 4rem;
+            font-weight: $bold;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        li{
+            color: $grayish-blue;
+            padding: 20px 0;
+            border-top: 1px solid $light-grayish-blue;
+            &:last-child{
+                border-bottom: 1px solid $light-grayish-blue;
+                margin-bottom: 2rem;
+            }
+        }
+        a{
+            text-transform: uppercase;
+            display: inline-block;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 7px;
+            letter-spacing: 2px;
+            font-size: 0.75rem;
+        }
+    }
+    .attribution{
+        grid-column-start: span 3;
+        text-align: center;
+        color: $dark-grayish-blue;
+        padding: 4rem 0 2rem 0;
+        a{
+            font-weight: 700;
+            color: $gradient2;
+        }
+    }
+}

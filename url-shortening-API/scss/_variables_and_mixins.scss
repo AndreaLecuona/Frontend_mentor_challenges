@@ -1,0 +1,44 @@
+$primary-cyan: hsl(180, 66%, 49%);
+$primary-violet: hsl(257, 27%, 26%);
+$secondary-red: hsl(0, 87%, 67%);
+$neutral-gray: hsl(0, 0%, 75%);
+$neutral-grayViolet: hsl(257, 7%, 63%);
+$neutral-darkBlue: hsl(255, 11%, 22%);
+$neutral-darkViolet: hsl(260, 8%, 14%);
+
+$fontSize: 18px;
+$fontPoppinsFamily: 'Poppins', sans-serif;
+$medium: 500; 
+$bold: 700;
+
+@mixin cyanButton {
+    background-color: $primary-cyan;
+    padding: 0.7rem 2rem;
+    border-radius: 50px;
+    color: white;
+    font-family: $fontPoppinsFamily;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: $bold;
+    border: none;
+    transition: all ease-in-out 0.3s;
+    &:focus{
+        outline: none;
+    }
+    &:hover{
+        background-color: #9be3e3;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+@mixin topMenu {
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+    font-family: $fontPoppinsFamily;
+    color: $neutral-grayViolet;
+    font-weight: $bold;
+    &:hover{
+        color: $neutral-darkViolet;
+    }
+}

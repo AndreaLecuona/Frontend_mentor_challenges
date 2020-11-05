@@ -1,0 +1,381 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+display: block; }
+body {
+line-height: 1; }
+ol, ul {
+list-style: none; }
+blockquote, q {
+quotes: none; }
+blockquote:before, blockquote:after{
+    content: '';
+    content: none;
+}
+blockquote q:before, blockquote q:after{
+    content: '';
+    content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0; }
+
+/* GENERAL */
+
+:root{
+    --primary-red: hsl(0, 100%, 68%);
+    --neutral-titulo_y_menu: hsl(230, 29%, 20%);
+    --neutral-bajada: hsl(230, 11%, 40%);
+    --neutral-volanta: hsl(231, 7%, 65%);
+    --neutral-fondo: hsl(207, 33%, 95%);
+    font-size: 18px;
+    --font-heading_cta_nav: 'Barlow Condensed', sans-serif;
+    --bold: 700;
+    --font-body: 'Barlow', sans-serif;
+    --regular: 400;
+}
+
+body{
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: var(--regular);
+    color: var(--font-heading_cta_nav);
+    width: 100vw;
+    overflow: hidden;
+}
+.wrapper{
+    width: 75%;
+    margin: 0 auto;
+}
+.img-container img{
+    width: 100%;
+}
+
+nav::before{
+    content: "";
+    display: inline-block;
+    width: 52vw;
+    height: 50vh;
+    background-color: var(--neutral-fondo);
+    border-radius: 0 0 0 50px;
+    position: absolute;
+    right: -30px;
+    top: -20px;
+    z-index: -1;
+}
+
+/* NAVBAR */
+
+nav .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 0;
+}
+nav .wrapper .logo{
+    margin-top: 0.2rem;
+}
+/* hamburguer icon + animation */
+nav .toggle-btn{
+    display: none;
+}
+nav .toggle-btn .icon span{
+    background: rgb(92, 91, 91);
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin-bottom: 3px;
+    position: relative;
+    top: 0;
+    transition: all ease-in-out 0.3s;
+}
+nav .toggle-btn.open .icon span:nth-child(2),
+nav .toggle-btn.open .icon span:nth-child(3){
+    width: 0;
+    opacity: 0;
+}
+nav .toggle-btn.open .icon span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 10.5px;
+}
+nav .toggle-btn.open .icon span:nth-child(4){
+    transform: rotate(45deg);
+    top: -10.5px;
+}
+/* menu */
+.menu{
+    display: flex;
+}
+nav .wrapper .menu li, .dot{
+    margin-left: 2.5rem;
+}
+.dot{
+    width: 6px;
+    height: 6px;
+    background: var(--neutral-volanta);
+    border-radius: 50%;
+    margin-top: 8px;
+    opacity: 40%;
+}
+nav .wrapper .menu li a{
+    text-decoration: none;
+    font-family: var(--font-heading_cta_nav);
+    font-weight: var(--bold);
+    color: var(--neutral-titulo_y_menu);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+}
+nav .wrapper .menu li:last-child a{
+    color: var(--neutral-volanta);
+}
+/* menu hover animation */
+nav .wrapper .menu li a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6%;
+    background: var(--primary-red);
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: scaleX(0);
+}
+nav .wrapper .menu li a:hover::before{
+    transform: scaleX(1);
+}
+
+/* HEADER */
+
+header .wrapper{
+    position: relative;
+    margin-top: 2rem;
+}
+header .wrapper .illustration{
+    position: absolute;
+    right: -25rem;
+    width: 90%;
+}
+header .wrapper .text{
+    padding-top: 3rem;
+}
+header .wrapper .text h3{
+    font-family: var(--font-heading_cta_nav);
+    color: var(--neutral-volanta);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.9rem;
+}
+.highlight{
+    background-color: var(--neutral-titulo_y_menu);
+    padding: 5px 12px 6px 15px;
+    border-radius: 50px;
+    color: var(--neutral-fondo);
+    font-weight: var(--bold);
+    letter-spacing: 2px;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+}
+header .wrapper .text h1{
+    width: 50%;
+    margin-top: 1.5rem;
+    font-family: var(--font-heading_cta_nav);
+    font-size: 3.7rem;
+    font-weight: var(--bold);
+    text-transform: uppercase;
+    color: var(--neutral-titulo_y_menu);
+}
+header .wrapper .text h2{
+    margin-top: 2rem;
+    width: 27%;
+    line-height: 1.5rem;
+    color: var(--neutral-bajada);
+    font-size: 1rem;
+}
+header .wrapper .text .call-to-action{
+    margin-top: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+/* button + animation */
+.call-to-action .btn-primary{
+    display: inline-block;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    margin-right: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: var(--primary-red);
+    color: var(--neutral-fondo);
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--font-heading_cta_nav);
+    border-radius: 10px;
+    position: relative;
+}
+.call-to-action .btn-primary span{
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+.call-to-action .btn-primary::before{
+    background: hsl(0, 49%, 50%);
+    content: "";
+    width: 0;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    transition: all 0.5s ease-in;
+}
+.call-to-action .btn-primary:hover::before{
+    width: 100%;
+}
+/* attribution */
+.attribution{
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 0.7rem;
+}
+.attribution a{
+    color: var(--primary-red);
+}
+
+
+
+/* MEDIAQUERIES */
+
+@media only screen and (max-width: 768px){
+    body{
+        overflow: visible;
+        width: 100vw;
+    }
+    nav::before{
+        width: 52vw;
+        height: 50vh;
+        right: 0px;
+    }
+    nav .wrapper{
+        width: 85vw;
+        position: relative;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 2rem 0 0 0;
+    }
+    nav .wrapper .logo img{
+        width: 70%;
+    }
+    nav .toggle-btn{
+        display: inline-block;
+    }
+    .menu{
+        visibility: hidden;
+        opacity: 0;
+        width: 100%;
+        text-align: center;
+        margin: 3rem auto;
+        flex-direction: column;
+        position: absolute;
+        background-color: white;
+        z-index: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        box-shadow: 1px 5px 5px hsla(235, 7%, 65%, 0.5);
+        top: 0px;
+
+        transition: visibility 0.4s ease-in, opacity 0.3s ease, top 0.4s ease-in; 
+    }
+    .menu.active{
+        visibility: visible;
+        opacity: 100%;
+        top: 2rem;
+    }
+    nav .wrapper .menu li{
+        position: relative;
+        margin: 0 auto;
+        width: 85%;
+        padding: 0.5rem 0;
+    }
+    .dot{
+        display: none;
+    }
+    nav .wrapper .menu li:last-child{
+        border-top: 1px solid hsla(235, 7%, 65%, 0.5);
+        margin-top: 0.5rem;
+        padding-top: 1rem;
+    }
+    nav .wrapper .menu li a::before{
+        display: none;
+    }
+    nav .wrapper .menu li a:hover{
+        color: var(--primary-red);
+    }
+    header .wrapper{
+        width: 85%;
+    }
+    header .wrapper .illustration{
+        position: static;
+        width: 108.95%;
+        overflow: hidden;
+    }
+    header .wrapper .illustration img{
+        width: 138%;
+    }
+    header .wrapper .text{
+        width: 100%;
+    }
+    header .wrapper .text h1, 
+    header .wrapper .text h2{
+        width: 100%;
+    }
+    header .wrapper .text h1{
+        font-size: 2rem;
+    }
+    header .wrapper .text h2{
+        padding-right: 2rem;
+        margin-top: 1rem;
+    }
+    header .wrapper .text h3{
+        font-size: 0.7rem;
+    } 
+    header .wrapper .text .call-to-action{
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+    .call-to-action .btn-primary{
+        padding: 0.5rem 0.8rem;
+        font-size: 0.7rem;
+        margin-right: 1rem;
+        border-radius: 3px;
+    }
+    .call-to-action .btn-primary::before{
+        border-radius: 3px;
+    }
+    .attribution{
+        width: 90%;
+        padding: 2.5rem 0 3rem 0;
+        font-size: 0.6rem;
+        margin: 0;
+    }
+}

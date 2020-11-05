@@ -1,0 +1,12 @@
+body{
+    font-family: $body-font;
+    font-weight: 400;
+    .wrapper{
+        width: 95%;
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+    .img-container img{
+        width: 100%;
+    }
+}

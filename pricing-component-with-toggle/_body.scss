@@ -1,0 +1,37 @@
+body{
+    height: 100vh;
+    background-color: $very-light-grayish-blue;
+    font-family: $font;
+    font-size: $size;
+    text-align: center;
+    .wrapper{
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+    }
+    &::before{
+        content: '';
+        display: block;
+        height: 33vh;
+        width: 40vw;
+        background-image: url('img/bg-bottom.svg');
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    &::after{
+        content: '';
+        display: block;
+        height: 80vh;
+        width: 25vw;
+        background-image: url('img/bg-top.svg');
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+}
+
+

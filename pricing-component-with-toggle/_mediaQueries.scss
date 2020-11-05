@@ -1,0 +1,36 @@
+@media only screen and (max-width: 768px){
+    body{
+        .wrapper{
+            width: 100%;
+            position: relative;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .grid{
+            grid-template-columns: 1fr;
+            row-gap: 4.0rem;
+            padding-top: 2rem;
+            .card{
+                &.basic,
+                &.master,
+                &.professional {
+                    margin: 0 auto;
+                }
+                
+            }
+            .attribution{
+                grid-column-start: 1;
+                padding: 0 3rem 2rem;
+                line-height: 1.5rem;
+            }
+        }
+        &::before{
+            display: none;
+        }
+        &::after{
+            height: 100vh;
+            width: 50vw;
+            top: -1.7rem;
+        }
+    }
+};

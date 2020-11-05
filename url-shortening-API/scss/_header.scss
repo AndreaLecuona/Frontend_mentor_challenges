@@ -1,0 +1,89 @@
+#introduction{
+    padding-top: 4rem;
+    width: 100%;
+    overflow: hidden;
+    .wrapper{
+        position: relative;
+        .illustration{
+            width: 45vw;
+            position: absolute;
+            right: -250px;
+        }
+        .main-text{
+            width: 55%;
+            .main-title{
+                font-size: 5rem;
+                line-height: 5.5rem;
+                letter-spacing: -1px;
+                font-weight: $bold;
+                color: $neutral-darkViolet;
+                padding-top: 4rem;
+            }
+            .subtitle{
+                margin-top: 1rem;
+                font-size: 1.5rem;
+                line-height: 2.5rem;
+                padding-right: 3rem;
+                padding-bottom: 3rem;
+            }
+            .btn{
+                @include cyanButton;
+            }
+        }
+        #trial{
+            margin-top: 6rem;
+            border-radius: 10px;
+            background: url(../img/bg-shorten-desktop.svg);
+            background-position: top;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: $primary-violet;
+            position: relative;
+            form{
+                display: flex;
+                align-items: baseline;
+                justify-content: center;
+                padding: 2.5rem 0 2rem;
+                .input-container{
+                    width: 75%;
+                    margin-right: 1rem;
+                    margin-top: 0.5rem;
+                    #userUrl{
+                        width: 100%;
+                        padding: 1.2rem 1.5rem 1rem;
+                        margin-bottom: 0.5rem;
+                        border-radius: 10px;
+                        font-size: 1.2rem;
+                        font-family: $fontPoppinsFamily;
+                        &::placeholder{
+                            font-size: 1.2rem;
+                            color: $neutral-grayViolet;
+                            font-family: $fontPoppinsFamily;
+                        }
+                    }
+                    .invalid{
+                        border: 3px solid $secondary-red;
+                        &::placeholder{
+                            color: $secondary-red;
+                            opacity: 0.5;
+                        }
+                    }
+                    small{
+                        color: $secondary-red;
+                        font-style: italic;
+                        font-size: 0.8rem;
+                        display: none;
+                    }
+                    small.error{
+                        display: block;
+                    }
+                }
+                .btn{
+                    @include cyanButton;
+                    padding: 1rem 2rem;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}

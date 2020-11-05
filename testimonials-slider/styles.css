@@ -1,0 +1,215 @@
+/* GENERALES */
+:root{
+    --font: 'Inter', sans-serif;
+    --light: 300;
+    --medium: 500;
+    --bold: 700;
+    --dark_blue: hsl(240, 38%, 20%);
+    --grayish_blue: hsl(240, 18%, 77%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--font);
+    background: url(img/pattern-curve.svg) bottom left / 50% no-repeat;
+    color: var(--dark_blue);
+    height: 100vh;
+}
+
+/* SLIDER */
+
+/* Estructura */
+.slider-container{
+    width: 80%;
+    margin: 3% auto 7% auto;
+    display: flex;
+    position: relative;
+    height: 41.667vw; /* height: 600px; */
+    overflow: hidden;
+    background: url(img/pattern-quotes.svg) top 100px left 100px / 10% no-repeat,
+    url(img/pattern-bg.svg) right 40px top 5px/ 52% no-repeat
+}
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 10% 1fr 5%;
+    grid-template-columns: repeat(10, 1fr);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Contenido - texto */
+blockquote{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: span 6;
+    z-index: 1;
+    margin-top: 15%;
+}
+blockquote p{
+    font-size: 2rem; /* 32px */
+    font-weight: var(--light);
+    padding-right: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+}
+cite{
+    font-style: normal;
+    font-size: 1.3rem;
+}
+.bold{
+    font-weight: var(--bold);
+}
+.gray{
+    font-weight: var(--medium);
+    color: var(--grayish_blue);
+}
+/* Animación de texto */
+.animation{
+    animation-name: liftUp;
+    animation-duration: 1s;
+}
+@keyframes liftUp{
+    from {opacity: 0; margin-top: 30%;}
+    to {opacity: 1; margin-top: 15%;}
+}
+
+
+/* Contenido - foto */
+.photo{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 6;
+    grid-column-end: span 4;
+    text-align: right;
+}
+.photo img{
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.144);
+}
+
+/* Botones */
+button{
+    background: none;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+}
+.btn-container{
+    width: 6.944vw; /* width: 100px; */
+    height: 3.472vw; /* height: 50px; */
+    margin-top: 43%;
+    margin-left: 55%;
+    color: transparent;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.144);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 2;
+}
+button img{
+    width: 2.431vw; /* 35px */
+    padding: 0.694vw; /* padding: 10px */   
+}
+
+/* ATRIBUCIÓN */
+.attribution{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.attribution a{
+    text-decoration: none;
+    color: var(--grayish_blue);
+}
+
+/* MEDIAQUERIES */
+@media (max-width: 1200px){
+    .slider-container{
+        height: 410px;
+    }
+    blockquote p{
+        font-size: 1.2rem;
+        line-height: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    cite{
+        font-size: 1rem;
+    }
+    .attribution{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width:768px){
+    .slider-container{
+        height: 320px;
+    }
+    blockquote p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    cite{
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width:576px){
+    body{
+        background: url(img/pattern-curve.svg) bottom 0px left / 60% no-repeat;
+    }
+    .slider-container{
+        height: 500px;
+        background: url(img/pattern-quotes.svg) bottom 170px left 130px / 15% no-repeat,
+        url(img/pattern-bg.svg) center top 0px/ 100% no-repeat
+    }
+    .slide{
+        grid-template-rows: 5% auto auto 5%;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    blockquote{
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+    }
+    blockquote p{
+        padding-right: 0;
+    }
+    cite{
+        font-size: 0.8rem;
+    }
+    .photo{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        text-align: center;
+    }
+    .photo img{
+        width: 80%;
+    }
+    .btn-container{
+        width: 70px;
+        height: 35px;
+        margin-top: 83%;
+        margin-left: 40%;
+    }
+    button img{
+        width: 13px;
+    }
+    .attribution{
+        font-size: 0.6rem;
+        line-height: 0.8rem;
+        padding: 0 7rem;
+    }
+}

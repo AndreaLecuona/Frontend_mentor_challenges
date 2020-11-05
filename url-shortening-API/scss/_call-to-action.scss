@@ -1,0 +1,20 @@
+#call-to-action{
+    background: url(../img/bg-boost-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $primary-violet;
+    text-align: center;
+    width: 100%;
+    .cta{
+        padding: 4rem 0;
+        h2{
+            font-size: 2.5rem;
+            color: white;
+            font-weight: $bold;
+            padding-bottom: 3.5rem;
+        }
+        a{
+            @include cyanButton;
+        }
+    }
+}

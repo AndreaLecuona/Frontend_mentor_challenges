@@ -1,0 +1,71 @@
+$primary-dark-violet: hsl(256, 26%, 20%);
+$primary-grayish-blue: hsl(216, 30%, 68%);
+
+$neutral-very-dark-violet: hsl(270, 9%, 17%);
+$neutral-dark-grayish-violet: hsl(273, 4%, 51%);
+$neutral-very-light-gray: hsl(0, 0%, 98%);
+
+$body-font-size: 16px;
+$headings-font: 'DM Serif Display', serif;
+$body-font: 'Karla', sans-serif;
+
+
+@mixin buttonLight{
+    color: $neutral-very-light-gray;
+    background: none;
+    font-family: $body-font;
+    border: 1px solid $neutral-very-light-gray;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.2s;
+    &:hover{
+    color: $neutral-very-dark-violet;
+    background-color: $neutral-very-light-gray;
+    border: 1px solid $neutral-very-light-gray;
+    cursor: pointer;
+    }
+}
+
+@mixin buttonDark{
+    color: $neutral-very-dark-violet;
+    background: none;
+    font-family: $body-font;
+    border: 1px solid $neutral-very-dark-violet;
+    padding: 0.7rem 1.5rem;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.2s;
+    &:hover{
+    color: $neutral-very-light-gray;
+    background-color: $neutral-very-dark-violet;
+    border: 1px solid $neutral-very-dark-violet;
+    cursor: pointer;
+    }
+}
+
+@mixin list ($listColor){
+    font-family: $body-font;
+    color: $listColor;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+@mixin headings ($headingsColor, $headingsSize){
+    font-family: $headings-font;
+    color: $headingsColor;
+    font-size: $headingsSize;
+    font-weight: 400;
+}
+
+@mixin text ($textColor){
+    color: $textColor;
+    font-size: $body-font-size;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    line-height: 1.5rem;
+}

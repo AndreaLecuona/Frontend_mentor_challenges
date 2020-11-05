@@ -1,0 +1,13 @@
+body{
+    font-family: $fontPoppinsFamily;
+    font-size: $fontSize;
+    font-weight: $medium;
+    color: $neutral-grayViolet;
+    .wrapper{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .img-container img{
+        width: 100%;
+    }
+}

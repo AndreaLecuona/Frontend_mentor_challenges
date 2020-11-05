@@ -1,0 +1,61 @@
+#navbar{
+    padding-top: 3rem;
+    width: 100%;
+    .wrapper{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        .logo{
+            margin-right: 1.5rem;
+        }
+        .toggle-btn{
+            display: none;
+            .icon span{
+                background: $neutral-grayViolet;
+                display: block;
+                width: 30px;
+                height: 4px;
+                margin-bottom: 6px;
+                position: relative;
+                top: 0;
+                transition: all ease-in-out 0.3s;
+            }
+            &.open .icon span{
+                &:nth-child(2){
+                    width: 0;
+                    opacity: 0;
+                }
+                &:nth-child(1){
+                    transform: rotate(-45deg);
+                    top: 10px;
+    
+                }
+                &:nth-child(3){
+                    transform: rotate(45deg);
+                    top: -10px;
+                }
+            }
+        }
+        .navigation{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a{
+                @include topMenu;
+            }
+            .menu{
+                display: flex;
+            }
+            .log-options{
+                display: flex;
+                align-items: center;
+                .btn{
+                    @include cyanButton;
+                    font-size: 0.9rem;
+                    padding: 0.6rem 1.3rem;
+                }
+            }
+        }
+    }
+}

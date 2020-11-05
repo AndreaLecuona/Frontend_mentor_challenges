@@ -1,0 +1,222 @@
+@media only screen and (max-width: 768px){
+    #navbar{
+        .wrapper{
+            width: 85%;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            .toggle-btn{
+                display: block;
+            }
+            .navigation{
+                position: absolute;
+                top: 4rem;
+                z-index: 1;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: $primary-violet;
+                text-align: center;
+                padding: 2rem;
+                border-radius: 10px;
+
+                visibility: hidden;
+                opacity: 0;
+
+                transition: visibility 0.4s ease-in, opacity 0.3s ease, top 0.4s ease-in;
+                &.active{
+                    visibility: visible;
+                    opacity: 1;
+                }
+                li{
+                    padding: 1.2rem 0;
+                    margin: 0;
+                    text-align: center;
+                    a{
+                        font-size: 1.2rem;
+                        margin-left: 0;
+                        color: white;
+                    }
+                }
+                .menu{
+                    flex-direction: column;
+                    li{
+                        &:last-child{
+                            padding-bottom: 2rem;
+                        }
+                    }
+                }
+                .log-options{
+                    flex-direction: column;
+                    border-top: 1px solid $neutral-gray;
+                    width: 100%;
+                    li{
+                        &:first-child{
+                            padding-top: 2rem;
+                        }
+                        .btn{
+                            padding: 0.7rem 5.5rem;
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+    #introduction{
+        padding-top: 2rem;
+        .wrapper{
+            width: 85%;
+            .illustration{
+                position: static;
+                width: 130vw;
+            }
+            .main-text{
+                width: 100%;
+                text-align: center;
+                .main-title{
+                    padding-top: 2rem;
+                    font-size: 2.5rem;
+                    line-height: 3rem;
+                }
+                .subtitle{
+                    font-size: 1rem;
+                    padding: 0 1rem 3rem;
+                    line-height: 1.5rem;
+                }
+            }
+            #trial{
+                background: url(../img/bg-shorten-mobile.svg);
+                background-position: top right;
+                background-size: auto;
+                background-repeat: no-repeat;
+                background-color: $primary-violet;
+                text-align: center;
+                form{
+                    flex-direction: column;
+                    padding: 1.5rem 0;
+                    .input-container{
+                        flex-direction: column;
+                        width: 100%;
+                        margin-right: 0;
+                        margin-bottom: 1rem;
+                        #userUrl{
+                            width: 90%;
+                            margin-right: 0;
+                            padding: 0.8rem;
+                            border-radius: 8px;
+                            &::placeholder{
+                                font-size: 1rem;
+                            }
+                        }
+                        small{
+                            text-align: left;
+                            margin-left: 1rem;
+                        }
+                    }
+                    .btn{
+                        margin: 0 auto;
+                        padding: 0.5rem 5.5rem;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+    #statistics{
+        .wrapper{
+            width: 85%;
+            .api-result{
+                flex-direction: column;
+                .old{
+                    margin: 0 auto;
+                    width: 90%;
+                    overflow: hidden;
+                }
+                .options{
+                    flex-direction: column;
+                    width: 100%;
+                    border-top: 1px solid $neutral-gray;
+                    .new{
+                        width: 90%;
+                        margin: 0 1rem;
+                        text-align: left;
+                    }
+                    .btn{
+                        margin: 0 auto 1rem;
+                        padding: 0.6rem 7.5rem;
+                        border-radius: 5px;
+                        width: 90%;
+                    }
+                }
+            }
+            p{
+                width: 100%;
+            }
+            .card-grid{
+                grid-template-columns: 1fr;
+                &::before{
+                    height: 80%;
+                    width: 2%;
+                    top: 10%;
+                    left: 50%;
+                }
+                .card{
+                    text-align: center;
+                    .icon{
+                        left: 38.5%;
+                    }
+                    p{
+                        font-size: 0.9rem;
+                        line-height: 1.5rem;
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    #call-to-action{
+        padding: 3rem 0;
+        background: url(../img/bg-boost-mobile.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: $primary-violet;
+        .wrapper{
+            width: 85%;
+            h2{
+                font-size: 1.7rem;
+                padding-bottom: 2.5rem;
+            }
+        }
+    }
+    footer{
+        .wrapper{
+            width: 85%;
+            .footer-grid{
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                .logo{
+                    margin-right: 0;
+                    margin-bottom: 3rem;
+                }
+                .sitemap{
+                    flex-direction: column;
+                    margin-left: 0;
+                    ul{
+                        margin-right: 0;
+                        margin-bottom: 2.5rem;
+                    }
+                }
+            }
+            .attribution{
+                padding: 3rem 2.5rem 0;
+                p{
+                    line-height: 1.3rem;
+                }
+            }
+        }
+    }
+}

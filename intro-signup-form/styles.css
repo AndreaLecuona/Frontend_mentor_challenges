@@ -1,0 +1,225 @@
+/* GENERAL */
+:root {
+    --primary-red: hsl(0, 100%, 74%);
+    --primary-green: hsl(154, 59%, 51%);
+    --accent: hsl(248, 32%, 49%);
+    --neutral-dark: hsl(249, 10%, 26%);
+    --neutral-grayish: hsl(246, 25%, 77%);
+    --font: 'Poppins', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*:focus{
+    outline: 0;
+}
+body {
+    font-family: var(--font);
+    background-color: var(--primary-red);
+    background-image: url('img/bg-intro-desktop.png');
+}
+.container{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 3rem 1fr 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+}
+.bold{
+    font-weight: 600;
+}
+
+
+/* LADO IZQUIERDO - texto */
+.presentation-text{
+    grid-row-start: 2;
+    grid-column-start: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h1{
+    padding-right: 2rem;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 1.5rem;
+}
+p{
+    font-weight: 400;
+    line-height: 1.7rem;
+    width: 100%;
+}
+
+
+/* LADO DERECHO - oferta y formulario */
+
+/* oferta */
+.sign-up{
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+.offer{
+    background-color: var(--accent);
+    border-radius: 10px;
+    box-shadow: 0 5px 1px 1px hsla(0, 44%, 46%, 0.5);
+    margin-bottom: 1rem;
+}
+.offer p{
+    width: auto;
+    padding: 0.8rem;
+    color: white;
+    font-weight: 400;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* formulario */
+#trial-form{
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 1px 1px hsla(0, 44%, 46%, 0.5);
+}
+.input-container{
+    position: relative;
+    margin-bottom: 1rem;
+    text-align: right;
+}
+.input-container input{
+    display: block;
+    border: 1px solid var(--neutral-grayish);
+    opacity: 0.8;
+    padding: 15px 20px;
+    width: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.input-container input::placeholder{
+    font-family: var(--font);
+    color: var(--neutral-dark);
+    font-weight: 600;
+}
+
+/* indicadores input incorrecto */
+.icon{
+    display: none;
+}
+.icon-error{
+    display: initial;
+    position: absolute;
+    width: 22px;
+    z-index: 2;
+    top: 12px;
+    right: 30px;
+}
+
+.msg{
+    display: none;
+}
+.msg-error{
+    display: initial;
+    color: var(--primary-red);
+    font-size: 0.7rem;
+    font-style: oblique;
+}
+
+/* Botón submit */
+.btn{
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--primary-green);
+    box-shadow: 0 4px 1px 1px hsl(154, 57%, 38%);
+    border-style: none;
+    color: white;
+    font-family: var(--font);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.btn:hover{
+    background-color: var(--accent);
+    box-shadow: 0 4px 1px 1px hsl(248, 33%, 37%);
+}
+
+/* Disclaimer */
+.policy{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: var(--neutral-grayish);
+    font-size: 0.7rem;
+}
+.policy a{
+    text-decoration: none;
+    color: var(--primary-red);
+}
+
+
+/* ATRIBUCIÓN */
+.attribution p{ 
+    font-size: 0.7rem; 
+    text-align: center;
+    color: var(--neutral-dark);
+}
+.attribution a{ 
+    color: var(--accent);
+    text-decoration: none;
+}
+
+
+/* MEDIAQUERIES */
+@media (max-width: 768px){
+    .body{
+        background-image: url('img/bg-intro-mobile.png');
+    }
+    .container{
+        grid-template-rows: 5rem auto 1fr 2rem;
+        grid-template-columns: 1fr;
+        width: 85%;
+    }
+    .presentation-text{
+        grid-row-start: 2;
+        grid-column-start: 1;
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+    h1{
+        padding-right: 0;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 600;
+    }
+    .sign-up{
+        grid-row-start: 3;
+        grid-column-start: 1;
+    }
+    .offer p{
+        width: 70%;
+        margin: auto;
+    }
+    #trial-form{
+        padding: 1.5rem;
+    }
+    .input-container img{
+        position: absolute;
+        width: 20px;
+        z-index: 2;
+        top: 15px;
+        right: 20px;
+    }
+    .input-container small{
+        left: 110px;
+    }
+    .policy{
+        padding: 0 1rem;
+        line-height: 1.2rem;
+    }
+}

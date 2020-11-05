@@ -1,0 +1,307 @@
+/* General styles */
+*:focus{
+    outline: none;
+}
+
+body{
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: hsl(243, 87%, 12%);
+    font-size: 1rem;
+}
+.container-fluid{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.illustration{
+    width: 100%;
+}
+h1, h2, h3{
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 2.3rem;
+    line-height: 3rem;
+    padding-bottom: 1rem;
+}
+p{
+    margin-right: 3.5rem;
+}
+.personal-button{
+    background-color: hsl(224, 93%, 58%);
+    margin-left: 0.5rem;
+    margin-top: -0.2rem;
+    width: 30%;
+    height: auto;
+    padding: 0.65rem;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+.access, .contact, .attribution{
+    padding: 4rem 0;
+    margin: 0 3rem;
+}
+.access, footer{
+    color: white;
+}
+
+/* Navigation bar */
+.navbar{
+    padding: 4rem 1rem;
+    margin: 0 3rem;
+}
+.nav-link{
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    color: hsl(243, 87%, 12%);
+    margin-left: 2rem;
+}
+
+/* Get started */
+.started{
+    padding-bottom: 5rem;
+    margin: 0 3rem 3rem 3rem;
+}
+.started-text{
+    padding: 4rem 1rem;
+}
+input{
+    width: 55%;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+input::placeholder{
+    color: hsl(0, 0%, 75%);
+    font-size: 0.8rem;
+}
+input:focus{
+    outline: 1px solid hsl(224, 93%, 58%);
+}
+
+/* How it works */
+.curve{
+    position: relative;
+    background-color: white;
+}
+.curve img{
+    width: 100%;
+}
+.color-gray{
+    background-color: hsl(240, 75%, 98%);
+    width: 100%;
+}
+.how{
+    padding: 4rem 0 6rem 0;
+    margin: 0 3rem;
+}
+.how p{
+    margin-right: 10rem;
+}
+.btn-link{
+    text-decoration: none;
+    padding: 0;
+    padding-bottom: 0.5rem;
+    color: hsl(170, 45%, 43%);
+    margin-bottom: 3rem;
+    border-bottom: 1px solid hsl(170, 45%, 43%);
+    border-radius: 0;
+}
+.btn-link:hover{
+    text-decoration: none;
+    color: hsl(170, 45%, 35%);
+}
+
+/* card */
+.card{
+    box-shadow: 0 0 8px hsl(0, 0%, 75%);
+}
+.card-title img{
+    width: 5%;
+}
+.card-body p{
+    margin-right: 0;
+    line-height: 1.5rem;
+    font-size: smaller;
+}
+/* testimonial */
+.avatar img{
+    width: 10%;
+    margin-right: 0.5rem;
+    border-radius: 100%;
+    float: left;
+}
+.avatar p{
+    font-size: 0.5rem;
+    line-height: 1rem;
+}
+.avatar .bold{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Early access */
+.color-violet{
+    background-color: hsl(238, 22%, 44%);
+}
+h3{
+    font-size: 2rem;
+}
+.access-input{
+    padding-left: 8rem;
+}
+.access-input input{
+    width: 100%;
+}
+.access button{
+    margin-top: 1rem;
+    margin-left: 0;
+    width: auto;
+    padding: 0.65rem 2rem;
+}
+
+/* Contact */
+.color-blue{
+    background-color:hsl(243, 87%, 12%);
+}
+.contact{
+    padding: 7rem 0 0 0;
+}
+.contact .brand{
+    margin-bottom: 2rem;
+}
+.contact p img{
+    margin-right: 1rem;
+}
+.contact ul{
+    list-style: none;
+    line-height: 2.5rem;
+    margin-top: 5rem;
+}
+.contact a{
+    text-decoration: none;
+    color: white;
+}
+.contact .social-media{
+    display: inline-block;
+    margin-top: 5.5rem;
+    margin-right: 0.5rem;
+    width: 35px;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 100px;
+    text-align: center;
+    padding-top: 4px;
+}
+.contact .social-media a{
+    font-size: 1rem;
+}
+.contact .social-media:hover{
+    background-color: hsl(238, 22%, 44%);
+}
+
+/* Attribution */
+.attribution{
+    font-size: 0.8rem;
+    padding-bottom: 0;
+}
+
+
+/* Media queries */
+
+@media (max-width: 575.98px){
+    /* General */
+    body{
+        text-align: center;
+    }
+    .navbar, .started, .how, .access, .contact, .attribution{
+        padding: 3rem 0;
+        margin: 0 1.5rem;
+    }
+    .illustration{
+        padding-bottom: 1.5rem;
+    }
+    h1{
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+    h2, h3{
+        font-size: 1.1rem;
+        padding-bottom: 0;
+    }
+    p{
+        width: 100%;
+        margin-right: 0;
+        font-size: 0.9rem;
+    }
+
+    /* Navigation */
+    .navbar{
+        padding: 1rem 1rem;
+    }
+    .navbar-brand{
+        text-align: left;
+        margin: 0;
+        width: 30%;
+    }
+    .navbar-brand img{
+        width: 100%;
+    }
+    .navbar-nav{
+        padding-top: 1rem;
+    }
+    .nav-item{
+        font-size: 0.8rem;
+        text-align: right;
+        padding: 0 1rem;
+    }
+
+    /* Started + how */
+    .started, .how{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    /* Started */
+    .started-text{
+        padding: 1rem 1rem;
+    }
+    input{
+        width: 100%;
+    }
+    .personal-button{
+        width: 100%;
+        margin: 0;
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    /* Early access */
+    .access-input{
+        padding: 0.5rem 1rem;
+    }
+    .access button{
+        width: 100%;
+    }
+
+    /* Card + contact */
+    .card, .contact{
+        text-align: left;
+    }
+
+    /* Contact */
+    .contact ul{
+        padding-left: 0;
+        margin-top: 2rem;
+    }
+    .social-media-group{
+        text-align: center;
+    }
+    .contact .social-media{
+        margin-top: 2rem;
+    }
+
+    /* Attribution */
+    .attribution{
+        padding: 0;
+        font-size: 0.5rem;
+    }
+}
