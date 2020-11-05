@@ -69,7 +69,7 @@ challenges.forEach(item => {
             </div>
             <h3 class="project-name">${item.title}</h3>
         </a>
-        <p><span class = "bold">Focus on: </span> ${item.technologies}</p>`
+        <p><span class = "bold">Focused on: </span> ${item.technologies}</p>`
     ;
     list.appendChild(card);
 });
