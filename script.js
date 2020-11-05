@@ -1,12 +1,12 @@
 const challenges = [
     {
         folder: "url-shortening-API",
-        title: "Url shortening API",
+        title: "Url shortening API landing page",
         technologies: "SASS - DOM - JS validation - Fetch API - Session Storage"
     },
     {
         folder: "tracking-intro-component",
-        title: "Tracking intro component",
+        title: "Project tracking intro component",
         technologies: "CSS3 transitions + animations"
     },
     {
@@ -26,12 +26,12 @@ const challenges = [
     },
     {
         folder: "testimonials-slider",
-        title: "Testimonials slider",
+        title: "Coding bootcamp testimonials slider",
         technologies: "CSS - CSS3 animation - DOM - JS"
     },
     {
         folder: "intro-signup-form",
-        title: "Intro signup form",
+        title: "Intro component with signup form",
         technologies: "CSS3 variables - DOM - JS validation"
     },
     {
@@ -46,12 +46,12 @@ const challenges = [
     },
     {
         folder: "single-price-grid",
-        title: "Single price grid",
+        title: "Single price grid component",
         technologies: "HTML - Responsive - CSS - Grid"
     },
     {
         folder: "huddle-landing-page-master-section",
-        title: "Huddle landing page (master section)",
+        title: "Huddle landing page intro section",
         technologies: "HTML - Responsive - Bootstrap - Fontawesome"
     },
 ];
