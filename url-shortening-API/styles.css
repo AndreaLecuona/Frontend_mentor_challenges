@@ -650,7 +650,11 @@ footer .footer-grid .social-media .media-icon {
   font-size: 1.8rem;
 }
 
-footer .footer-grid .social-media .media-icon:hover {
+footer .footer-grid .social-media .media-icon a {
+  color: white;
+}
+
+footer .footer-grid .social-media .media-icon a:hover {
   color: #2acfcf;
   cursor: pointer;
 }
@@ -868,7 +872,7 @@ footer .attribution p a {
     text-align: center;
   }
   #statistics .wrapper .card-grid .card .icon {
-    left: 38.5%;
+    left: 45%;
   }
   #statistics .wrapper .card-grid .card p {
     font-size: 0.9rem;
@@ -923,6 +927,12 @@ footer .attribution p a {
   }
   footer .wrapper .attribution p {
     line-height: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #statistics .wrapper .card-grid .card .icon {
+    left: 38.5%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

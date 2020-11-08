@@ -7,13 +7,12 @@
 body{
     background-color: hsl(257, 40%, 49%);
     background-image: url(img/bg-desktop.svg);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     text-align: left;
-    height: 100vh;
 }
 
 
@@ -91,7 +90,7 @@ body{
 
 /* MEDIA QUERIES */
 
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
     
     body{
         background-image: none;

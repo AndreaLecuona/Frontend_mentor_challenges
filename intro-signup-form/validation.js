@@ -8,7 +8,7 @@ const password = document.querySelector('#password');
 //Manejo de envío de formulario
 form.addEventListener('submit', function(event) {   
     if(validFirstName() && validLastName() && validEmail() && validPassword()){
-        form.setAttribute("invalid", false);
+        form.dataset.invalid = false;
         form.reset();
         form.submit();
         console.log('formulario enviado');

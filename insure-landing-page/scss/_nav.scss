@@ -13,6 +13,9 @@ nav{
                 a{
                     @include list($neutral-dark-grayish-violet);
                     margin-left: 1.8rem;
+                    &:hover{
+                        color: $primary-dark-violet;
+                    }
                 }
                 .btn-navbar{
                     @include buttonDark;

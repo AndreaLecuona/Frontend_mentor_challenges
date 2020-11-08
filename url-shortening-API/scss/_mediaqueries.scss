@@ -165,7 +165,7 @@
                 .card{
                     text-align: center;
                     .icon{
-                        left: 38.5%;
+                        left: 45%;
                     }
                     p{
                         font-size: 0.9rem;
@@ -215,6 +215,20 @@
                 padding: 3rem 2.5rem 0;
                 p{
                     line-height: 1.3rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 576px){
+    #statistics{
+        .wrapper{
+            .card-grid{
+                .card{
+                    .icon{
+                        left: 38.5%;
+                    }
                 }
             }
         }

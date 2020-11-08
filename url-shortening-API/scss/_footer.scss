@@ -42,9 +42,12 @@ footer{
             .media-icon{
                 margin-left: 1.5rem;
                 font-size: 1.8rem;
-                &:hover{
-                    color: $primary-cyan;
-                    cursor: pointer;
+                a{
+                    color: white;
+                    &:hover{
+                        color: $primary-cyan;
+                        cursor: pointer;
+                    }
                 }
             }
         }

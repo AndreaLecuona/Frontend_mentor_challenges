@@ -5,6 +5,15 @@ const urlPattern = /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2
 const apiUrl = 'https://rel.ink/api/links/';
 const parentUl = document.getElementById('api-calls');
 
+// MENÚ MOBILE - animación de ícono y navegación
+const toggleMenu = document.querySelector(".toggle-btn");
+const menu = document.querySelector(".navigation");
+
+toggleMenu.addEventListener('click', () => {
+    toggleMenu.classList.toggle('open');
+    menu.classList.toggle('active');
+})
+
 // SUBMIT
 form.addEventListener('submit', async (e) => {
     
@@ -143,14 +152,3 @@ function getSessionStorage(){
     //mapeo el array de objetos del session storage y los uso para crear los recuadros blancos
     pastResults.map(data => displayUi(data.user, data.api));
 }
-
-
-
-// MENÚ MOBILE - animación de ícono y navegación
-const toggleMenu = document.querySelector(".toggle-btn");
-const menu = document.querySelector(".navigation");
-
-toggleMenu.addEventListener('click', () => {
-    toggleMenu.classList.toggle('open');
-    menu.classList.toggle('active');
-})

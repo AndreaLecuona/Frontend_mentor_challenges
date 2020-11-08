@@ -1,4 +1,60 @@
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 768px){
+    nav{
+        .wrapper{
+            width: 90%;
+        }
+    }
+    header{
+        .wrapper{
+            width: 90%;
+            .photo{
+                width: 50%;
+            }
+            .intro{
+                width: 50%;
+                padding: 3rem 2rem 3rem 0;
+                position: relative;
+                h1{
+                    font-size: 2.8rem;
+                    line-height: 3.2rem;
+                }
+            }
+        }
+        &::before{
+            height: 60%;
+            width: 20%;
+            background-size: cover;
+            position: absolute;
+            bottom: -15rem;
+            left: 0;
+        }
+        &::after{
+            height: 40%;
+            width: 30%;
+            background-size: cover;
+        }
+    }
+    .features{
+        .wrapper{
+            width: 90%;
+            margin-top: -5rem;
+        }
+    }
+    .call-to-action{
+        .wrapper{
+            width: 90%;
+            padding: 4.6rem 5rem 2rem 5rem;
+        }
+    }
+    footer{
+        .wrapper{
+            width: 90%;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 576px){
     nav{
         .wrapper{
             width: 100%;
