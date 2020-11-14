@@ -120,13 +120,10 @@ nav .toggle-btn.open .icon span:nth-child(4){
 nav .wrapper .menu li, .dot{
     margin-left: 2.5rem;
 }
-.dot{
-    width: 6px;
-    height: 6px;
-    background: var(--neutral-volanta);
-    border-radius: 50%;
-    margin-top: 8px;
-    opacity: 40%;
+nav .wrapper .menu li:last-child{
+    list-style-type: disc;
+    color: var(--neutral-volanta);
+    margin-left: 3.5rem;
 }
 nav .wrapper .menu li a{
     text-decoration: none;
@@ -141,6 +138,7 @@ nav .wrapper .menu li a{
 }
 nav .wrapper .menu li:last-child a{
     color: var(--neutral-volanta);
+    padding-left: 2rem;
 }
 /* menu hover animation */
 nav .wrapper .menu li a::before{
@@ -159,6 +157,11 @@ nav .wrapper .menu li a::before{
 }
 nav .wrapper .menu li a:hover::before{
     transform: scaleX(1);
+}
+nav .wrapper .menu li:last-child a::before{
+    left: 2rem;
+    bottom: 0;
+    width: 55%;
 }
 
 /* HEADER */
@@ -317,8 +320,12 @@ header .wrapper .text .call-to-action{
         width: 85%;
         padding: 0.5rem 0;
     }
-    .dot{
-        display: none;
+    nav .wrapper .menu li:last-child{
+        list-style: none;
+        margin-left: auto;
+    }
+    nav .wrapper .menu li:last-child a{
+        padding-left: 0;
     }
     nav .wrapper .menu li:last-child{
         border-top: 1px solid hsla(235, 7%, 65%, 0.5);
