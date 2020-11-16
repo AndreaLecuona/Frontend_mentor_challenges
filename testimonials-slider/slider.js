@@ -35,10 +35,10 @@ prevBtn.addEventListener('click', function(){
 
     //Event listeners para teclado
 document.addEventListener('keydown', function(e){
-    const key = e.keyCode;
-    if(key === 39){
+    const key = e.code;
+    if(key === 'ArrowRight'){
         positiveCounter();
-    } else if (key === 37){
+    } else if (key === 'ArrowLeft'){
         negativeCounter();
     }
 })
