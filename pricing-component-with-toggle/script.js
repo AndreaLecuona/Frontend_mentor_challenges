@@ -20,11 +20,11 @@ switchToggle.addEventListener('change', function(){
 });
 
 document.addEventListener('keydown', function(e){
-    const key = e.keyCode;
-    if(key === 39){
+    const key = e.code;
+    if(key === 'ArrowRight'){
         switchToggle.checked = true;
         priceChange();
-    } else if (key === 37){
+    } else if (key === 'ArrowLeft'){
         switchToggle.checked = false;
         priceChange();
     }
