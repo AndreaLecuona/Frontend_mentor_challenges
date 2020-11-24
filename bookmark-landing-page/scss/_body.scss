@@ -1,0 +1,16 @@
+body{
+    font-family: $family;
+    font-weight: $regular;
+    font-size: $body-size;
+    color: $neutral-very-dark-blue;
+    .wrapper{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .logo-container{
+        width: 13%;
+    }
+    img{
+        width: 100%;
+    }
+}

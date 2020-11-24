@@ -1,0 +1,72 @@
+//Colors
+$primary-soft-blue: hsl(231, 69%, 60%);
+$primary-soft-red: hsl(0, 94%, 66%);
+
+$neutral-grayish-blue: hsl(229, 8%, 60%);
+$neutral-shadows: hsla(229, 8%, 60%, 0.205);
+$neutral-very-dark-blue: hsl(229, 31%, 21%);
+$mobile-menu-background: hsla(229, 31%, 21%, 0.932);
+
+//Fonts
+$body-size: 18px;
+$medium: 500;
+$regular:400;
+$family: 'Rubik', sans-serif;
+
+//Mixins
+@mixin button($mainColor) {
+    background-color: $mainColor;
+    color: white;
+    font-weight: $medium;
+    text-align: center;
+    padding: 0.8rem 2rem;
+    border-radius: 7px;
+    border: 1px solid transparent;
+    box-shadow: 0 5px 5px $neutral-shadows;
+    &:hover{
+        background-color: transparent;
+        color: $mainColor;
+        border: 1px solid $mainColor;
+        cursor: pointer;
+    }
+}
+
+@mixin mainMenu {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0 1.5rem;
+    &:hover{
+        color: $primary-soft-red;
+        cursor: pointer;
+    }
+}
+
+@mixin title($sizeT) {
+    font-weight: $medium;
+    font-size: $sizeT;
+}
+
+@mixin paragraph($sizeP, $lineHeight) {
+    color: $neutral-grayish-blue;
+    font-size: $sizeP;
+    line-height: $lineHeight;
+}
+
+
+
+
+// <i class="fas fa-chevron-down"></i>  UNICODE: f078
+// <i class="fas fa-chevron-up"></i>  UNICODE: f077
+// <i class="fas fa-exclamation-circle"></i>  UNICODE: f06a
+
+// EXAMPLE
+// #thirdLevMenu ul li.active .title:after{ 
+//     content: '\f0da';
+//     font-family: FontAwesome;
+//     font-weight: normal;
+//     font-style: normal;
+//     margin:0px 0px 0px 10px;
+//     text-decoration:none;
+ 
+//  } 

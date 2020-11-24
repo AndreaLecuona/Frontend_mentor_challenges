@@ -1,0 +1,117 @@
+header{
+    .wrapper{
+        position: relative;
+        .img-container{
+            width: 50vw;
+            position: absolute;
+            right: -7rem;
+        }
+        .hero-text{
+            width: 35vw;
+            padding: 5rem 0;
+            h1{
+                @include title(3rem);
+                padding-bottom: 2rem;
+            }
+            p{
+                @include paragraph(1.1rem, 1.8rem);
+                padding-bottom: 2.5rem;
+            }
+            .btn-blue {
+                @include button($primary-soft-blue);
+                margin-right: 1rem;
+            }
+            .btn-white {
+                @include button(rgb(231, 231, 231));
+                color: rgb(77, 77, 77);
+                &:hover{
+                    color: rgb(77, 77, 77);
+                    border: 1px solid rgb(77, 77, 77);
+                }
+            }
+        }
+    }
+    &::before{
+        content: "";
+        display: block;
+        width: 40vw;
+        height: 40vh;
+        background: $primary-soft-blue;
+        border-radius: 0 0 0 30%;
+        position: absolute;
+        right: 0;
+        top: 20rem;
+    }
+    padding-bottom: 15rem;
+}
+
+@media only screen and (max-width: 768px){
+    header {
+        .wrapper .hero-text{
+            width: 40vw;
+            padding: 2rem 0;
+            h1{
+            font-size: 1.5rem;
+            padding-bottom: 1rem;
+            }
+            p{
+                font-size: 0.8rem;
+                line-height: 1rem;
+                padding-bottom: 1.5rem;
+            }
+            .btn-blue, .btn-white{
+                font-size: 0.7rem;
+                padding: 0.7rem 1rem;
+                margin-top: 1rem;
+                width: 60%;
+            }
+            .btn-blue{
+                margin-right: 0.5rem;
+            }
+        }
+        &::before{
+            height: 20vh;
+            right: -2.5rem;
+            top: 15rem;
+        }
+        padding-bottom: 8rem;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    header{
+        .wrapper{
+            display: flex;
+            flex-direction: column;
+            .img-container{
+                margin: 0 auto;
+                position: static;
+                width: 85vw;
+            }
+            .hero-text{
+                width: 100%;
+                text-align: center;
+                h1{
+                    padding-top: 1rem;
+                }
+                p{
+                    padding-bottom: 2rem;
+                    line-height: 1.3rem;
+                }
+                .btn-blue, .btn-white{
+                    font-size: 0.8rem;
+                    padding: 0.7rem 1rem;
+                    margin-top: 1rem;
+                    width: 50%;
+                }
+            }
+        }
+        &::before{
+            height: 25vh;
+            width: 70vw;
+            right: 0rem;
+            top: 14rem;
+        }
+        padding-bottom: 6rem;
+    }
+}

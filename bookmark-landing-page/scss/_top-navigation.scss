@@ -1,0 +1,118 @@
+nav{
+    .wrapper{
+        padding: 3.5rem 0 4rem;
+        display: flex;
+        justify-content: space-between;
+        .toggle-btn{
+            display: none;
+        }
+        .navbar{
+            display: flex;
+            .navbar-link {
+                a {
+                @include mainMenu;
+                }
+                &:last-child a{
+                    @include button($primary-soft-red);
+                    margin-left: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    nav{
+        .wrapper .logo-container{
+            width: 20%;
+        }
+        .wrapper .navbar .navbar-link a{
+            padding: 0 1rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 576px){
+    nav{
+        position: relative;
+        .wrapper{
+            .logo-container{
+                width: 50%;
+                z-index: 2;
+            }
+            .toggle-btn{
+                z-index: 2;
+                display: block;
+                cursor: pointer;
+                .icon{
+                    span{
+                        background: $neutral-very-dark-blue;
+                        display: block;
+                        width: 30px;
+                        height: 4px;
+                        margin-bottom: 3px;
+                        position: relative;
+                        top: 0;
+                        transition: all ease-in-out 0.3s;
+                    }
+                }
+                &.open{
+                    .icon span:nth-last-child(2){
+                        width: 0;
+                        opacity: 0;
+                    }
+                    .icon span:nth-last-child(1){
+                        transform: rotate(-45deg);
+                        top: -7.5px;
+                        background: white;
+                    }
+                    .icon span:nth-last-child(3){
+                        transform: rotate(45deg);
+                        top: 7.5px;
+                        background: white;
+                    }
+                }
+            }
+            .navbar{
+                display: none;
+                opacity: 0;
+                width: 100vw;
+                height: 100vh;
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                padding-top: 7rem;
+                background-color: $mobile-menu-background;
+                transition: all ease-in-out 0.3s;
+                &.active{
+                    opacity: 1;
+                    display: block;
+                }
+                .navbar-link {
+                    width: 80%;
+                    text-align: center;
+                    margin: 0 auto;
+                    padding: 1.5rem 0;
+                    border-top: 1px solid rgba(255, 255, 255, 0.363);
+                    a {
+                    @include mainMenu;
+                    color: white;
+                    font-size: 1rem;
+                    }
+                    &:last-child a{
+                        background: transparent;
+                        padding: 0.5rem 7.5rem;
+                        border: 2px solid white;
+                        box-shadow: none;
+                        margin: 0;
+                        &:hover{
+                            border: 2px solid $primary-soft-red;
+                            color: $primary-soft-red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

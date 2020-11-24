@@ -1,0 +1,93 @@
+footer{
+    background: $neutral-very-dark-blue;
+    color: white;
+    .wrapper{
+        padding: 2rem 0;
+        display: flex;
+        align-items: center;
+        .logo-container{
+            margin-right: 2rem;
+        }
+        .footer-nav{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .navbar-footer{
+                display: flex;
+                .navbar-link{
+                    a{
+                        @include mainMenu;
+                        color: white;
+                    }
+                }
+            }
+            .social-media{
+                a{
+                    color: white;
+                    margin-left: 2rem;
+                    font-size: 1.5rem;
+                    &:hover{
+                        color: $primary-soft-red;
+                    }
+                }
+            }
+        }
+    }
+}
+.attribution{
+    text-align: center;
+    padding: 1rem;
+    a{
+        color: $primary-soft-blue;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    footer{
+        .wrapper{
+            .logo-container{
+                width: 30%;
+            }
+            .footer-nav{
+                .navbar-footer{
+                    .navbar-link{
+                        a{
+                            font-size: 0.8rem;
+                            padding: 0 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 576px){
+    footer{
+        .wrapper{
+            flex-direction: column;
+            .logo-container{
+                width: 50%;
+                margin: 0 auto 1rem auto;
+            }
+            .footer-nav{
+                flex-direction: column;
+                .navbar-footer{
+                    flex-direction: column;
+                    margin-bottom: 1rem;
+                    .navbar-link{
+                        text-align: center;
+                        padding: 1rem 0;
+                    }
+                }
+                .social-media{
+                    a{
+                        margin: 0 auto;
+                        padding: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

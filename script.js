@@ -1,5 +1,10 @@
 const challenges = [
     {
+        folder: "bookmark-landing-page",
+        title: "Bookmark landing page",
+        technologies: "Responsive - SASS - DOM - JS validation"
+    },
+    {
         folder: "url-shortening-API",
         title: "Url shortening API landing page",
         technologies: "SASS - DOM - JS validation - Fetch API - Session Storage"

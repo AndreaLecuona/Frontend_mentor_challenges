@@ -1,0 +1,123 @@
+#faq{
+    .wrapper{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        h2{
+            @include title(2rem);
+            padding-bottom: 2rem;
+        }
+        p{
+            @include paragraph(1.1rem, 1.8rem);
+            width: 46%;
+            margin: 0 auto;
+            margin-bottom: 4rem;
+        }
+        .accordion-bar{
+            background: white;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-family: $family;
+            font-weight: $medium;
+            color: $neutral-very-dark-blue;
+            padding: 2rem 1rem 1.5rem 0;
+            width: 50%;
+            margin: 0 auto;
+            border: none;
+            border-bottom: 1px solid $neutral-grayish-blue;
+            outline: none;
+            display: flex;
+            justify-content: space-between;
+            &:hover{
+                color: $primary-soft-red;
+            }
+            i{
+                color: $primary-soft-blue;
+                transition: all 0.4s;
+                &.icon-dropped{
+                    color: $primary-soft-red;
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+        .accordion-panel{
+            max-height: 0;
+            transition: max-height 0.2s ease-out;
+            padding-top: 1rem;
+            overflow: hidden;
+            p{
+                @include paragraph(1.1rem, 1.8rem);
+                margin: 0 auto;
+                width: 50%;
+                text-align: left;
+            }
+        }        
+        .btn-blue{
+            @include button($primary-soft-blue);
+            width: 15%;
+            margin: 3rem auto 0 auto;
+        }
+    }
+    padding-bottom: 15rem;
+}
+
+@media only screen and (max-width: 768px){
+    #faq{
+        .wrapper{
+            h2{
+                font-size: 1.5rem;
+                padding-bottom: 1rem;
+            }
+            p{
+                width: 60%;
+                font-size: 0.8rem;
+                line-height: 1rem;
+                padding-bottom: 1rem;
+                margin-bottom: 2rem;
+            }
+            .accordion-bar{
+                width: 76%;
+                font-size: 1rem;
+            }
+            .accordion-panel p{
+                width: 76%;
+                font-size: 0.9rem;
+            }
+            .btn-blue{
+                font-size: 0.8rem;
+                padding: 0.7rem 0.6rem;
+            }
+        }
+        padding-bottom: 8rem;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    #faq{
+        .wrapper{
+            p{
+                width: 90%;
+                line-height: 1.3rem;
+            }
+            .accordion-bar{
+                width: 95%;
+                font-size: 0.8rem;
+                padding-bottom: 1rem;
+                padding-top: 1.5rem;
+                i{
+                    font-size: 1rem;
+                }
+            }
+            .accordion-panel p{
+                width: 95%;
+                font-size: 0.8rem;
+                line-height: 1.5rem;
+            }
+            .btn-blue{
+                width: 40%;
+                font-size: 0.9rem;
+                padding: 1rem 1.5rem;
+            }
+        }
+    }
+}

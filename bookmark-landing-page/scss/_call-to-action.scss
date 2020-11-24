@@ -1,0 +1,141 @@
+#call-to-action{
+    background-color: $primary-soft-blue;
+    padding: 4rem 0;
+    .wrapper{
+        width: 40%;
+        margin: 0 auto;
+        color: white;
+        text-align: left;
+        p{
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        h2{
+            @include title(2rem);
+            line-height: 2.5rem;
+            padding: 2rem 3rem;
+            text-align: center;
+        }
+        form{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .input-container{
+                width: 100%;
+                padding-right: 1.5rem;
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                input{
+                    width: 100%;
+                    background-color: white;
+                    padding: 0.8rem;
+                    border: none;
+                    border-radius: 5px;
+                    &::placeholder{
+                        font-family: $family;
+                        color: $neutral-grayish-blue;
+                        opacity: 50%;
+                    }
+                    &.error{
+                        border: 2px solid $primary-soft-red;
+                    }
+                }
+                .error-message{
+                    font-size: 1rem;
+                    text-transform: none;
+                    letter-spacing: normal;
+                    font-style: oblique;
+                    text-align: left;
+                    background-color: $primary-soft-red;
+                    padding: 0.5rem;
+                    width: 100%;
+                    display: none;
+                }
+                .error-icon{
+                    position: absolute;
+                    width: 28px;
+                    height: 28px;
+                    left: 21rem;
+                    top: 0.5rem;
+                    visibility: hidden;
+                }
+            }
+            .btn-red{
+                @include button($primary-soft-red);
+                font-family: $family;
+                width: 35%;
+                height: 20%;
+                font-size: 1rem;
+                &:hover{
+                    background-color: white;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #call-to-action{
+        padding: 4rem 0 1rem 0;
+        .wrapper{
+            width: 70%;
+            margin: 0 auto;
+            form{
+                .input-container{
+                    margin-bottom: 1rem;
+                    .error-message{
+                        font-size: 0.8rem;
+                    }
+                    .error-icon{
+                        left: 20rem;
+                    }
+                }
+                .btn-red{
+                    padding: 0.8rem 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 576px){
+    #call-to-action{
+        padding: 4rem 0 2rem 0;
+        .wrapper{
+            width: 80%;
+            text-align: center;
+            p{
+                font-size: 0.8rem;
+            }
+            h2{
+                font-size: 1.5rem;
+                line-height: 2rem;
+                padding: 1rem 0 2rem 0;
+            }
+            form{
+                flex-direction: column;
+                .input-container{
+                    padding-right: 0;
+                    input{
+                        width: 100%;
+                        margin-bottom: 0;
+                        padding: 0.8rem;
+                    }
+                    .error-message{
+                        margin-bottom: 1rem;
+                    }
+                    .error-icon{
+                        left: 16rem;
+                        top: 0.5rem;
+                    }
+                }
+                .btn-red{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
