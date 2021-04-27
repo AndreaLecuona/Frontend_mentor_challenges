@@ -1,5 +1,10 @@
 const challenges = [
     {
+        folder: "job-listings-with-filtering",
+        title: "Job listing with filters",
+        technologies: "JS - Dynamically generated HTML - Data manipulation - Responsive - SASS"
+    },
+    {
         folder: "bookmark-landing-page",
         title: "Bookmark landing page",
         technologies: "Responsive - SASS - DOM - JS validation"

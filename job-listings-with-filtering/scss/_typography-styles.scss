@@ -1,0 +1,91 @@
+body{
+    font-family: $font-spartan;
+    font-size: $mobile-size;
+    font-weight: $bold;
+}
+
+.filter-item-name{
+    color: $primary;
+    background-color: $neutral-background;
+    font-family: $font-spartan;
+    font-weight: $bold;
+    font-size: $mobile-size;
+    padding: 0.6rem;
+    border-radius: 5px 0 0 5px;
+}
+.btn-filter{
+    border-radius: 5px;
+    color: $primary;
+    background-color: $neutral-background;
+    font-family: $font-spartan;
+    font-weight: $bold;
+    font-size: $mobile-size;
+    padding: 0.5rem;
+    &:hover{
+        background-color: $primary;
+        color: $neutral-filter;
+    }
+}
+
+#clear-all{
+    color: $neutral-dark;
+    font-family: $font-spartan;
+    font-size: $mobile-size;
+    font-weight: $bold;
+    padding: 1rem;
+    margin: 0;
+    &:hover{
+        color: $primary;
+        text-decoration: underline;
+    }
+}
+
+h2{
+    color: $primary;
+    margin-right: 0.5rem;
+    margin-top: 0.2rem;
+}
+.job-title{
+    color: $neutral-very-dark;
+    font-size: $desktop-size;
+    &:hover{
+        color: $primary;
+    }
+}
+
+
+.tag{
+    color: $neutral-background;
+    font-size: $mobile-size;
+    font-weight: $medium;
+    text-transform: uppercase;
+    padding: 0.5rem 0.5rem 0.3rem 0.5rem;
+    border-radius: 50px;
+    margin-left: 0.5rem;
+    text-align: center;
+}
+.new{
+    background-color: $primary;
+}
+.featured{
+    background-color: $neutral-very-dark;
+}
+
+
+.job-specs-item{
+    color: $neutral-dark;
+    font-weight: $medium;
+    &:nth-child(2),
+    &:nth-child(3){
+        list-style-type: disc;
+    }
+}
+
+.attribution{ 
+    font-family: $font-spartan;
+    font-size: 11px; 
+    text-align: center; 
+    a{
+        color: $primary;
+    }
+}

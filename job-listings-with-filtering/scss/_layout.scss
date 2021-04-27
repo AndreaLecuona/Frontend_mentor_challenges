@@ -1,0 +1,131 @@
+//GENERAL LAYOUT
+body{
+    header{
+        width: 100%;
+        height: 20vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .wrapper{
+        width: 90%;
+        margin: 110px auto 10% auto;
+    }
+}
+
+//FILTER LAYOUT
+.filter-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    .filter-list{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0.5rem 0;
+        .filter-item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            height: fit-content;
+            margin: 0.5rem;
+            .clear-one{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.5rem;
+                margin: 0;
+            }
+        }
+    }
+}
+
+#top{
+    display: none;
+}
+
+//CARD CONTAINER
+.card-container{
+    margin-top: 3.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    .card-item{
+        padding: 0 1rem;
+        .card-info{
+            position: relative;
+            width: 100%;
+            .logo-container{
+                position: absolute;
+                top: -33%;
+                img{
+                    width: 50%;
+                }
+            }
+            .name{
+                margin-top: 1rem;
+                padding: 1rem 0 0.5rem 0;
+                display: flex;
+                align-items: center;
+            }
+            .job-specs-list{
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                border-bottom: 2px solid $neutral-filter;
+                .job-specs-item{
+                    margin-right: 1.5rem;
+                    padding: 1rem 0rem;
+                    &:nth-child(1){
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        .filter-container{
+            padding: 0;
+            width: fit-content;
+            .filter-list{
+                width: 90%;
+                margin-bottom: 0.5rem;
+                .filter-item{
+                    margin: 0.5rem 1rem 0.5rem 0;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1024px){
+    .card-container{
+        gap: 2rem;
+        .card-item{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .card-info{
+                .logo-container{
+                    position: static;
+                    float: left;
+                    padding: 1rem;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .name{
+                    margin-top: 0;
+                }
+                .job-specs-list{
+                    border-bottom: none;
+                }
+            }
+            .filter-container{
+                .filter-list{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

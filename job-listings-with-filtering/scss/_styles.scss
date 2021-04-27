@@ -1,0 +1,46 @@
+* button,
+* .job-title{
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+body{
+    background-color: $neutral-background;
+}
+header{
+    background-color: $primary;
+    background-image: url('../images/bg-header-mobile.svg');
+    background-size: cover;
+}
+
+.filter-container,
+.card-item{
+    background-color: white;
+    border-radius: 5px;
+}
+
+.clear-one{
+    border-radius: 0 5px 5px 0;
+    background-color: $primary;
+    &:hover{
+        background-color: $neutral-very-dark;
+    }
+}
+
+.shadow{
+    box-shadow: 0 10px 20px $shadow;
+}
+
+.border{
+    border-left: 5px solid $primary;
+}
+
+
+@media only screen and (min-width: 768px){
+    header{
+        background-image: url('../images/bg-header-desktop.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}

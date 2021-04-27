@@ -1,0 +1,19 @@
+//COLOR
+$primary: hsl(180, 29%, 50%);
+$neutral-background: hsl(180, 52%, 96%);
+$neutral-filter: hsl(180, 31%, 95%);
+$neutral-dark: hsl(180, 8%, 52%);
+$neutral-very-dark:hsl(180, 14%, 20%);
+
+$shadow: hsla(180, 29%, 50%, 0.253);
+
+
+//FONTS
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap');
+
+$mobile-size: 12px;
+$desktop-size: 15px;
+$font-spartan: 'Spartan', sans-serif;
+$medium: 500;
+$bold: 700;
