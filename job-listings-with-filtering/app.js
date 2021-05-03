@@ -167,7 +167,6 @@ const hideFilterBox = () => {
   filterBox.style.display = 'none';
 };
 
-//Falta volver a filtrar la lista cuando se elimina un filtro
 const removeSingleFilter = (e) => {
   const singleFilterCategory = e.currentTarget.dataset.category;
   const indexOfTarget = selectedFilters.indexOf( singleFilterCategory );
@@ -175,6 +174,7 @@ const removeSingleFilter = (e) => {
 
   if(selectedFilters.length === 0) removeAllFilters();
   populateFilters(selectedFilters);
+  unfilter(selectedFilters);
 };
 
 const removeAllFilters = () => {
@@ -205,7 +205,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
-const updateJobs = (filterName) => {
+const filter = (filterName) => {
   const newJobList = dataCopy.filter(
     job => {
       const allInOne = [job.role, job.level, ...job.languages, ...job.tools];
@@ -217,6 +217,21 @@ const updateJobs = (filterName) => {
   populateJobs(newJobList);
 };
 
+const unfilter = (arrOfFilters) => {
+  dataCopy = data.slice();
+  const searchRegex = new RegExp(`\\b(${arrOfFilters.join(')|(')})\\b`)
+
+  const prevFilteredJobList = dataCopy.filter(
+    job => {
+      const allInOne = [job.role, job.level, ...job.languages, ...job.tools];
+      return allInOne.find(tag => { if(searchRegex.test( tag )) { return true } } )
+    }
+  )
+
+  dataCopy = prevFilteredJobList;
+  populateJobs(prevFilteredJobList);
+}
+
 const displayFilters = (e) => {
   showFilterBox();
   
@@ -226,7 +241,7 @@ const displayFilters = (e) => {
   selectedFilters.push(clickedFilter);
   
   populateFilters(selectedFilters);
-  updateJobs(clickedFilter);
+  filter(clickedFilter);
 };
 
 
