@@ -2,7 +2,7 @@ const challenges = [
     {
         folder: "job-listings-with-filtering",
         title: "Job listing with filters",
-        technologies: "JS - Dynamically generated HTML - Data manipulation - Responsive - SASS"
+        technologies: "JS - Dynamically generated HTML - Data manipulation - Mobile First - SASS"
     },
     {
         folder: "bookmark-landing-page",
