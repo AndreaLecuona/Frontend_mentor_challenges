@@ -1,8 +1,16 @@
+// Esta es una versión que consumía otra API y requería hacer un POST request. 
+//La empresa que proveía ese servicio ya no está disponible y por lo tanto la API ya no funciona.
+
+//This is an older version that consumed a different API through POST requests.
+//The provider of this shortening link service it's no longer available and therefore, the API it's no longer working.
+
+///////////////////////////////////////////////////////////////////////////
+
 const form = document.querySelector("#trial-form");
 const input = document.querySelector("#userUrl");
 const msg = document.querySelector("#trial small");
 const urlPattern = /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/ig;
-const apiUrl = 'https://api.shrtco.de/v2/shorten?url=';
+const apiUrl = 'https://rel.ink/api/links/';
 const parentUl = document.getElementById('api-calls');
 
 // MENÚ MOBILE - animación de ícono y navegación
@@ -23,8 +31,9 @@ form.addEventListener('submit', async (e) => {
     if(validation(userInputValue)) {
         clearErrors();
         const newData = await getShortUrl(userInputValue);
-
-        const { original_link:oldUrl, short_link:newUrl } = newData.result;
+        const { url:oldUrl, hashid } = newData;
+        
+        const newUrl = `https://rel.ink/${hashid}`;
         
         displayUi(oldUrl, newUrl);
         addSessionStorage(oldUrl, newUrl);
@@ -54,13 +63,18 @@ function clearErrors(){
 
 // PETICIÓN A API 
 async function getShortUrl(userInputValue) {
+    let body = JSON.stringify({ "url": userInputValue });
+
     try{
-        let response = await fetch(`${apiUrl}${userInputValue}`)
+        let response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: { "Content-Type": "application/json" },
+            body: body
+        })
         const data = await response.json();
         return data;
-
     } catch (err) {
-        alert("It seems there's a problem with the shortening link service. Try later");
+        alert("Shortlinking service rel.ink and API has been suspended :(");
         console.log(err);
     }
 };
